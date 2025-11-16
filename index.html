@@ -2,34 +2,44 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Yatsi — Кибер-Авантюрист</title>
+  <title>Yatsi — Кибер/Авантюрист</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap">
   <style>
-    body {
+    html, body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: radial-gradient(circle at top, #0f0f0f, #1a1a1a);
-      color: #e0e0e0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      color: #eee;
+      overflow: hidden;
     }
-    .container {
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 20px;
-      background: rgba(30, 30, 30, 0.9);
-      border: 1px solid #444;
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .card {
+      max-width: 500px;
+      margin: 80px auto;
+      padding: 30px;
+      background: rgba(20, 20, 20, 0.85);
+      border: 2px solid #0ff;
       border-radius: 12px;
       box-shadow: 0 0 20px #0ff;
     }
     h1 {
+      text-align: center;
       font-size: 2.5em;
       color: #0ff;
-      text-align: center;
       margin-bottom: 10px;
     }
     h2 {
       color: #0ff;
+      margin-top: 30px;
       border-bottom: 1px solid #0ff;
       padding-bottom: 5px;
-      margin-top: 30px;
     }
     ul {
       list-style: none;
@@ -49,34 +59,73 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <div id="particles-js"></div>
+  <div class="card">
     <h1>Yatsi</h1>
-    <p><em>Жанр: Кибер / Авантюрист</em></p>
+    <p><em>Кибер / Авантюрист</em></p>
 
     <h2>🧬 Обо мне</h2>
-    <p>Визуальный экспериментатор, цифровой алхимик. Создаю аватары, жанровые mashup'ы и играю с грамматикой как с кодом. Веду проекты на стыке стиля и смысла.</p>
+    <p>Визуальный экспериментатор, цифровой алхимик. Создаю аватары, жанровые mashup'ы и играю с грамматикой как с кодом.</p>
 
-    <h2>🧠 Навыки</h2>
+    <h2>🧠 Языки</h2>
     <ul>
-      <li>Прототипирование цифрового арта</li>
-      <li>Дизайн аватаров с авто-фоном (Hyundai, киберпанк, стимпанк)</li>
-      <li>Web-дизайн с жанровыми темами</li>
-      <li>Языковые игры и грамматические квесты</li>
+      <li>Python</li>
+      <li>HTML</li>
+      <li>JavaScript</li>
+      <li>Lua</li>
     </ul>
 
     <h2>🛠 Проекты</h2>
     <ul>
-      <li><strong>Avatar Lab</strong> — генератор образов с авто-декором</li>
-      <li><strong>WordMash</strong> — грамматические игры с жанровыми twist'ами</li>
-      <li><strong>BioSite</strong> — персональный сайт в стиле кибер-идола</li>
+      <li>Avatar Lab</li>
+      <li>WordMash</li>
+      <li>BioSite</li>
     </ul>
 
     <h2>📡 Контакты</h2>
     <ul>
       <li>Telegram: <a href="https://t.me/yatsi_art">@yatsi_art</a></li>
       <li>GitHub: <a href="https://github.com/yatsi">github.com/yatsi</a></li>
-      <li>Bio-сайт: <a href="https://yatsi.github.io">yatsi.github.io</a></li>
     </ul>
   </div>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80 },
+        "color": { "value": "#0ff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#0ff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "repulse": { "distance": 100 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
